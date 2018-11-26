@@ -25,6 +25,7 @@
     "core-js": "^2.5.4",
     "rxjs": "^6.0.0",
     "zone.js": "~0.8.26",
+    "rxjs-compat": "^6.3.3",
     "typescript": "~2.7.2"
   },
   "devDependencies": {
@@ -47,5 +48,9 @@
     "ts-node": "~5.0.1",
     "tslint": "~5.9.1",
     "typescript": "~2.7.2"
+  },
+  "engines": {
+    "node": "10.8.0",
+    "npm": "6.2.0"
   }
 }
