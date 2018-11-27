@@ -14,17 +14,17 @@ export class QuestionComponent implements OnInit {
 
   questions: Question[];
 
-  constructor(private router: Router, private userService: QuestionService) {
+  constructor(private router: Router, private questionService: QuestionService) {
 
   }
 
   ngOnInit() {
-    this.userService.getQuestions()
+    this.questionService.getQuestions()
       .subscribe((data:Response) => {
         //this.questions = data;
         console.log(data);
       });
-  };
+  }
 
   // deleteUser(user: User): void {
   //   this.userService.deleteUser(user)

@@ -15,7 +15,7 @@ export class QuestionService {
   
 
   public getQuestions() {
-    return this.http.get(this.restUrl+'questions');
+    return this.http.get(this.restUrl + 'questions');
   }
 
   public deleteUser(user) {
