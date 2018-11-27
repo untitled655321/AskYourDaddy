@@ -9,6 +9,7 @@ import { AddQuestionComponent } from './add-question/add-question.component';
 import { HeaderComponent } from './header/header.component';
 import { FooterComponent } from './footer/footer.component';
 import { HomeComponent } from './home/home.component';
+import { FormsModule } from '@angular/forms';
 
 
 const routes: Routes = [
@@ -30,6 +31,7 @@ const routes: Routes = [
     BrowserModule,
     RouterModule.forRoot(routes),
     HttpClientModule,
+    FormsModule
 
   ],
   exports: [

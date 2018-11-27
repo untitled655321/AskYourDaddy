@@ -1,3 +1,13 @@
-<p>
-  add-question works!
-</p>
+<form>
+  <div class="form-group">
+    <label for="exampleFormControlInput1">Ask question to your daddy!</label>
+    <input [(ngModel)] = "question.title" name="title" type="text" class="form-control" id="exampleFormControlInput1" placeholder="What is pipi daddy?">
+  </div>
+  
+  <div class="form-group">
+    <label for="exampleFormControlTextarea1">Ask specyfic question to your daddy</label>
+    <input type="textarea" [(ngModel)] = "question.description" class="form-control" id="exampleFormControlTextarea1" rows="3" placeholder=
+    "Your extended question about: What is pipi daddy?" name="description">
+  </div>
+  <button type="submit" class="btn btn-primary" (click)="createQuestion()">Ask Your Daddy!!!</button>
+</form>

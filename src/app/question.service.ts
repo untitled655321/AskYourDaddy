@@ -22,7 +22,7 @@ export class QuestionService {
     return this.http.delete(this.restUrl+'/questions/'+ question.id);
   }
 
-  public createUser(user) {
-    return this.http.post<Question>(this.restUrl, user);
+  public createQuestion(question) {
+    return this.http.post<Question>(this.restUrl+'/questions', question);
   }
 }
