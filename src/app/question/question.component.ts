@@ -20,7 +20,7 @@ export class QuestionComponent implements OnInit {
 
   ngOnInit() {
     this.userService.getQuestions()
-      .subscribe(data => {
+      .subscribe((data:Response) => {
         this.questions = data;
       });
   };
