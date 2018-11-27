@@ -8,11 +8,13 @@ import { HttpClientModule } from '@angular/common/http';
 import { AddQuestionComponent } from './add-question/add-question.component';
 import { HeaderComponent } from './header/header.component';
 import { FooterComponent } from './footer/footer.component';
+import { HomeComponent } from './home/home.component';
 
 
 const routes: Routes = [
   { path: 'questions', component: QuestionComponent },
-  {path: 'add' ,component:AddQuestionComponent}
+  {path: 'add' ,component:AddQuestionComponent},
+  {path:'home',component:HomeComponent}
 ];
 
 @NgModule({
@@ -21,7 +23,8 @@ const routes: Routes = [
     QuestionComponent,
     AddQuestionComponent,
     HeaderComponent,
-    FooterComponent
+    FooterComponent,
+    HomeComponent
   ],
   imports: [
     BrowserModule,
