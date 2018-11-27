@@ -1,15 +1,16 @@
 
-<div class="card text-center" *ngFor="let question of questions">
+<div class="card text-center mt-2" *ngFor="let question of questions">
   <div class="card-header">
-    {{question.title}}
+    <h3>{{question.title}}</h3>
   </div>
   <div class="card-body">
-    <h5 class="card-title">{{question.updatedAt}}</h5>
-    <p class="card-text">{{question.description}}</p>
+    <p class="card-title">{{question.updatedAt}}</p>
+    <h5 class="card-text">{{question.description}}</h5>
     <a href="#" class="btn btn-primary">See Anwseres</a>
   </div>
   <div class="card-footer text-muted">
-    {{question.createdAt}}
+    <p>{{question.createdAt}}</p>
+    <button class="btn btn-danger" (click)="deleteQuestion(question)">Delete Question</button>
   </div>
-  <button class="btn btn-danger" (click)="deleteQuestion(question)">Delete Question</button>
+ 
 </div>
