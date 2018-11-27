@@ -6,3 +6,7 @@ export class Question {
     createdAt: string;
     updatedAt: string;
 }
+
+export class QuestionResponse{
+    content:any;
+}
