@@ -6,8 +6,8 @@
   
   <div class="form-group">
     <label for="exampleFormControlTextarea1">Ask specyfic question to your daddy</label>
-    <input type="textarea" [(ngModel)] = "question.description" class="form-control" id="exampleFormControlTextarea1" rows="3" placeholder=
-    "Your extended question about: What is pipi daddy?" name="description">
+    <textarea  [(ngModel)] = "question.description" class="form-control" id="exampleFormControlTextarea1" rows="3" placeholder=
+    "Your extended question about: What is pipi daddy?" name="description"></textarea>
   </div>
   <button type="submit" class="btn btn-primary" (click)="createQuestion()">Ask Your Daddy!!!</button>
 </form>
