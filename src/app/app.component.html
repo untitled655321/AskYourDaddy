@@ -1,14 +1,9 @@
-<div class="container-fluid">
-  <div class="row">
-  <div class="col-md-offset-1">
-    <h1>
-      Ask Your Daddy !
-    </h1>
-  </div>
-
-  <a routerLink="/questions"> Questions</a>
-  <a style="margin-left:10px" routerLink="/add">Add Question</a>
-  <br />
-  <router-outlet ></router-outlet>
-  </div>
+<div class="cover-container d-flex w-100 h-100 p-3 mx-auto flex-column">
+  <app-header></app-header>
+  <main role="main" class="inner cover">
+    <h1 class="cover-heading">Cover your page.</h1>
+      <router-outlet></router-outlet>
+  
+  </main>
+  <app-footer></app-footer>
 </div>
