@@ -18,8 +18,8 @@ export class QuestionService {
     return this.http.get(this.restUrl + 'questions');
   }
 
-  public deleteUser(user) {
-    return this.http.delete(this.restUrl + "/" + user.id);
+  public deleteQuestion(question) {
+    return this.http.delete(this.restUrl+'/questions/'+ question.id);
   }
 
   public createUser(user) {

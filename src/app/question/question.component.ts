@@ -28,10 +28,10 @@ export class QuestionComponent implements OnInit {
       });
   }
 
-  // deleteUser(user: User): void {
-  //   this.userService.deleteUser(user)
-  //     .subscribe(data => {
-  //       this.users = this.users.filter(u => u !== user);
-  //     })
-  // };
+  deleteQuestion(question: Question): void {
+    this.questionService.deleteQuestion(question)
+      .subscribe(data => {
+        this.questions = this.questions.filter(u => u !== question);
+      })
+  };
 }

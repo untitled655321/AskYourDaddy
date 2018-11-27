@@ -7,6 +7,3 @@ export class Question {
     updatedAt: string;
 }
 
-export class QuestionResponse{
-    content:any;
-}

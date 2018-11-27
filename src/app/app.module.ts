@@ -5,16 +5,19 @@ import { AppComponent } from './app.component';
 import { QuestionComponent } from './question/question.component';
 import { QuestionService } from './question.service';
 import { HttpClientModule } from '@angular/common/http';
+import { AddQuestionComponent } from './add-question/add-question.component';
 
 
 const routes: Routes = [
   { path: 'questions', component: QuestionComponent },
+  {path: 'add' ,component:AddQuestionComponent}
 ];
 
 @NgModule({
   declarations: [
     AppComponent,
-    QuestionComponent
+    QuestionComponent,
+    AddQuestionComponent
   ],
   imports: [
     BrowserModule,
