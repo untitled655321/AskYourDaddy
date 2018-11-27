@@ -1,24 +1,14 @@
-<div class="col-md-6">
-  <h2> User Details</h2>
 
-  <table class="table table-striped">
-    <thead>
-      <tr>
-        <th class="hidden">Id</th>
-        <th>FirstName</th>
-        <th>LastName</th>
-        <th>Email</th>
-        <th>Action</th>
-      </tr>
-      </thead> <tbody>
-      <tr *ngFor="let question of questions">
-        {{question|json}}
-        <td class="hidden"></td>
-        <td></td>
-        <td></td>
-        <td></td>
-        <td><button class="btn btn-danger" (click)="deleteQuestion(question)"> DeleteQuestion</button></td>
-      </tr>
-      </tbody>
-  </table>
+<div class="card text-center" *ngFor="let question of questions">
+  <div class="card-header">
+    {{question.title}}
+  </div>
+  <div class="card-body">
+    <h5 class="card-title">{{question.updatedAt}}</h5>
+    <p class="card-text">{{question.description}}</p>
+    <a href="#" class="btn btn-primary">See Anwseres</a>
+  </div>
+  <div class="card-footer text-muted">
+    {{question.createdAt}}
+  </div>
 </div>
