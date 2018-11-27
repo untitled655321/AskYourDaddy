@@ -11,7 +11,9 @@
         <th>Action</th>
       </tr>
       </thead> <tbody>
-      <tr *ngFor="let questions of questions">
+      <tr *ngFor="let question of questions">
+        {{question.description}}
+        {{question.title}}
         <td class="hidden"></td>
         <td></td>
         <td></td>

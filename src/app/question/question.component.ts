@@ -12,7 +12,7 @@ import "rxjs/Rx";
 })
 export class QuestionComponent implements OnInit {
 
-  questions: Question[];
+  questions: any;
 
   constructor(private router: Router, private questionService: QuestionService) {
 
@@ -21,8 +21,8 @@ export class QuestionComponent implements OnInit {
   ngOnInit() {
     this.questionService.getQuestions()
       .subscribe((data:Response) => {
-        //this.questions = data;
-        console.log(data);
+        this.questions = data.content;
+        console.log(data.content);
       });
   }
 
