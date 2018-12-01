@@ -10,10 +10,14 @@ import { HeaderComponent } from './header/header.component';
 import { FooterComponent } from './footer/footer.component';
 import { HomeComponent } from './home/home.component';
 import { FormsModule } from '@angular/forms';
+import { AnswerService } from './answer.service';
+import { QuestionDetailsComponent } from './question/question-details/question-details.component';
 
+enableProdMode();
 
 const routes: Routes = [
-  { path: 'questions', component: QuestionComponent },
+  { path: 'questions', component: QuestionComponent},
+  {path: 'questions/:id', component: QuestionDetailsComponent},
   {path: 'add' ,component:AddQuestionComponent},
   {path:'home',component:HomeComponent}
 ];
@@ -25,7 +29,8 @@ const routes: Routes = [
     AddQuestionComponent,
     HeaderComponent,
     FooterComponent,
-    HomeComponent
+    HomeComponent,
+    QuestionDetailsComponent
   ],
   imports: [
     BrowserModule,
@@ -37,7 +42,7 @@ const routes: Routes = [
   exports: [
     RouterModule
   ],
-  providers: [QuestionService],
+  providers: [QuestionService,AnswerService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

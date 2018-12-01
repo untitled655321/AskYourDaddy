@@ -27,11 +27,9 @@ export class QuestionComponent implements OnInit {
         console.log(data.content);
       });
   }
+deleteQuestion(question: Question): void {
+    this.questionService.deleteQuestion(question).subscribe();
+  }
 
-  deleteQuestion(question: Question): void {
-    this.questionService.deleteQuestion(question)
-      .subscribe(data => {
-        this.questions = this.questions.filter(u => u !== question);
-      })
-  };
+ 
 }
