@@ -13,7 +13,7 @@ export class AnswerService{
     constructor(private http: HttpClient,private questionService:QuestionService){}
 
     getAnsweres(question:Question){
-        return this.http.get(this.questionService.getRestUrl());
+        return this.http.get(this.questionService.getRestUrl()+'questions/'+question.id+'/answers');
     }
 
 

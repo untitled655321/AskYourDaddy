@@ -16,6 +16,7 @@ export class QuestionDetailsComponent implements OnInit {
   
  question:any;
  question_id:number;
+ answers:any;
 
   constructor(private route: ActivatedRoute,
     private answerService:AnswerService,private questionService:QuestionService) { 
@@ -25,7 +26,11 @@ export class QuestionDetailsComponent implements OnInit {
   ngOnInit() {
     this.route.params.subscribe(params => this.question_id = params.id);
 
-    this.questionService.getSpecyficQuestion(this.question_id).subscribe(data=> this.question=data);
+    this.questionService.getSpecyficQuestion(this.question_id).subscribe((data)=> {
+      this.question=data;
+      this.answerService.getAnsweres(this.question).subscribe(dataa => this.answers = dataa);
+    });
+    
   }
  
   

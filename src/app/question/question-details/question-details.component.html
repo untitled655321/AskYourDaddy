@@ -8,3 +8,4 @@
 <div class="card-footer text-muted">
   <p>Created : {{question.createdAt}}</p>
 </div>
+<app-answer *ngFor="let answer of answers" [answer]="answer"></app-answer>

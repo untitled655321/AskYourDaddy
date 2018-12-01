@@ -12,6 +12,7 @@ import { HomeComponent } from './home/home.component';
 import { FormsModule } from '@angular/forms';
 import { AnswerService } from './answer.service';
 import { QuestionDetailsComponent } from './question/question-details/question-details.component';
+import { AnswerComponent } from './question/question-details/answer/answer.component';
 
 enableProdMode();
 
@@ -31,7 +32,8 @@ const routes: Routes = [
     HeaderComponent,
     FooterComponent,
     HomeComponent,
-    QuestionDetailsComponent
+    QuestionDetailsComponent,
+    AnswerComponent
   ],
   imports: [
     BrowserModule,
