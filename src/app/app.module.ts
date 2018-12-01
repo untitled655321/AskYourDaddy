@@ -16,6 +16,7 @@ import { QuestionDetailsComponent } from './question/question-details/question-d
 enableProdMode();
 
 const routes: Routes = [
+  { path: '', redirectTo: '/home', pathMatch: 'full' },
   { path: 'questions', component: QuestionComponent},
   {path: 'questions/:id', component: QuestionDetailsComponent},
   {path: 'add' ,component:AddQuestionComponent},
