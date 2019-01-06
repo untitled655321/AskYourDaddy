@@ -5,6 +5,7 @@
     <h3>{{question.title}}</h3>
   </div>
   <div class="card-body">
+      <img src="{{question.url}}" alt="Image" width="250" height="250">
     <p class="card-title">Updated : {{question.updatedAt}}</p>
     <h5 class="card-text">{{question.description}}</h5>
     <a routerLink="/questions/{{question.id}}" class="btn btn-primary">See Anwseres</a>

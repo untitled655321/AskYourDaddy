@@ -10,16 +10,21 @@ import { QuestionService } from '../question.service';
 })
 export class AddQuestionComponent implements OnInit {
 question:Question = new Question();
-
+file:any;
 
   constructor(private router:Router,private questionService:QuestionService) { }
 
   ngOnInit() {
   }
-
+  onChange(event) {
+    this.file = event.srcElement.files;
+    console.log(this.file[0]);
+  }
   createQuestion(){
-    this.questionService.createQuestion(this.question)
-    .subscribe();
+    this.questionService.createQuestion(this.question,this.file[0])
+    .subscribe(data=>{
+      console.log(data);
+    });
   }
 
 }

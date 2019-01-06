@@ -1,4 +1,6 @@
 <form>
+
+    <input type="file" name="file" id="file" (change)="onChange($event)">
   <div class="form-group">
     <label for="exampleFormControlInput1">Ask question to your daddy!</label>
     <input [(ngModel)] = "question.title" name="title" type="text" class="form-control" id="exampleFormControlInput1" placeholder="What is pipi daddy?">
